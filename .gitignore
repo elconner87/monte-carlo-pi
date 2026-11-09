@@ -1,0 +1,15 @@
+# Python cache files
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Mamba/conda environment folders (commit environment.yml instead)
+env/
+.conda/
+
+# Mac system files
+.DS_Store
+
+# Editor settings
+.vscode/
+.idea/

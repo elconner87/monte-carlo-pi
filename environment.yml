@@ -1,0 +1,9 @@
+name: monte-carlo-pi
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy=2.1
+  - matplotlib-base=3.9   # matplotlib without GUI libraries (plots are saved to files)
+  - pyparsing=3.2   # matplotlib dependency; pinned to avoid deprecation warnings from newer versions
+  - pytest=8.3
