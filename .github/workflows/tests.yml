@@ -1,0 +1,27 @@
+name: tests
+
+# Run this workflow on every push (and on pull requests)
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    # "bash -el" starts a login shell so the micromamba environment is active
+    defaults:
+      run:
+        shell: bash -el {0}
+
+    steps:
+      # 1. Download the repository's code onto GitHub's server
+      - uses: actions/checkout@v4
+
+      # 2. Build the same environment as Great Lakes, from environment.yml
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+
+      # 3. Run the tests
+      - name: Run pytest
+        run: python -m pytest -v
