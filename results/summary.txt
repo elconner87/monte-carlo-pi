@@ -1,0 +1,9 @@
+Monte Carlo estimation of pi - convergence study
+Sample sizes:            100 to 1,000,000,000
+Trials per sample size:  30
+Random seed:             2026
+Fitted slope (std vs N): -0.508   (theory: -0.500)
+Fitted constant C:       1.753   (theory: 1.642)
+Best mean estimate:      3.1415853  (N = 1,000,000,000)
+True value of pi:        3.1415927
+Run time:                393.4 s
